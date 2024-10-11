@@ -2,12 +2,8 @@
   import { base } from "$app/paths";
 </script>
 
-<div class="hero min-h-screen">
-  <div class="hero-content text-center">
-    <div class="max-w-md">
-      <h1 class="text-2xl">Welcome to LEDPlayr</h1>
-      <img class="m-auto my-4" src="{base}/logo.png" alt="LEDplayr Logo" />
-      <p>This site is currently under construction, please check back later</p>
-    </div>
-  </div>
-</div>
+<img class="m-auto my-4 w-96 lg:w-auto" src="{base}/logo_full.png" alt="LEDplayr Logo" />
+
+<h1 class="w-full text-center text-2xl">
+  LEDPlayr is a lightweight player and scheduler for xLights FSEQ files
+</h1>
