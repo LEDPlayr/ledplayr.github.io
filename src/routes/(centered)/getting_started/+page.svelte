@@ -1,3 +1,7 @@
+<svelte:head>
+  <title>LEDPlayr: Getting Started</title>
+</svelte:head>
+
 <p>
   Create the required configuration files and directories. None of the directories have fixed
   values but below are recommended paths and a sample systemd unit file.

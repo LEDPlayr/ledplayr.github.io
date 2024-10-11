@@ -20,6 +20,10 @@
   ];
 </script>
 
+<svelte:head>
+  <title>LEDPlayr: Screenshots</title>
+</svelte:head>
+
 <div class="container mx-auto">
   <h1 class="py-4 text-2xl">Desktop Screenshots</h1>
 

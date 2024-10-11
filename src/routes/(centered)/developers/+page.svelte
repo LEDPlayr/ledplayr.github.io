@@ -1,3 +1,7 @@
+<svelte:head>
+  <title>LEDPlayr: Developers</title>
+</svelte:head>
+
 <h2>How to build</h2>
 <p>
   LEDPlayr uses Rust for the backend and Svelte/Typescript for the frontend. Both apps are

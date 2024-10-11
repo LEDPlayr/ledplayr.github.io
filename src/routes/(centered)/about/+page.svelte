@@ -1,3 +1,7 @@
+<svelte:head>
+  <title>LEDPlayr: About</title>
+</svelte:head>
+
 <h2>What is supported?</h2>
 
 <ul>

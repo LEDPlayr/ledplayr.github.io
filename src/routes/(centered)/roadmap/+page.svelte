@@ -1,3 +1,7 @@
+<svelte:head>
+  <title>LEDPlayr: Roadmap</title>
+</svelte:head>
+
 <h2>(Somewhat) Planned Features</h2>
 
 <p>
