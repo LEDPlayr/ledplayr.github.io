@@ -45,11 +45,17 @@
 
 <ul>
   <li>
-    Uploading via xLights occasionally results in a sequence that has one less node than
-    intended
+    Uploading via xLights can result in a sequence that has one less node than intended
     <ul>
-      <li>I haven't narrowed down where the error occurs</li>
-      <li>Uploading the file manually works</li>
+      <li>This only happens when uploading sequences at the same time as outputs</li>
+      <li>
+        It is advisable to untick all sequences and select "All" in the "UDP Out" column to
+        upload outputs
+      </li>
+      <li>
+        After initial output upload select "None" in the "UDP Out" column and tick sequences
+      </li>
+      <li>This issue is being actively investigated</li>
     </ul>
   </li>
 </ul>
