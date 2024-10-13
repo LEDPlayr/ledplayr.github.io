@@ -6,13 +6,7 @@
   import { darkMode } from "$lib/stores.svelte";
 
   let { children } = $props();
-
   let prefersDarkMode = $state(false);
-  if (window.matchMedia) {
-    window.matchMedia("(prefers-color-scheme: dark)").onchange = (v) => {
-      prefersDarkMode = v.matches;
-    };
-  }
 
   $effect(() => {
     let theme: string;
@@ -28,6 +22,16 @@
   });
 
   onMount(() => {
+    // Watch for change of user preferences
+    if (window.matchMedia) {
+      const wm = window.matchMedia("(prefers-color-scheme: dark)");
+      prefersDarkMode = wm.matches;
+      wm.onchange = (v) => {
+        prefersDarkMode = v.matches;
+      };
+    }
+
+    // Watch for other tabs changing the local storage
     const updateDarkMode = (ev: StorageEvent) => {
       if (ev.key == "darkMode") {
         $darkMode = JSON.parse(ev.newValue || "null");
