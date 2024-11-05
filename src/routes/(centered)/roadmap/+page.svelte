@@ -11,13 +11,6 @@
 
 <ul>
   <li>Docker images</li>
-  <li>
-    Display of logs in the WebUI
-    <ul>
-      <li>Coupled with better error handling</li>
-    </ul>
-  </li>
-  <li>Ability to test models</li>
   <li>Webcam streaming to the UI to make testing LED placement easier</li>
   <li>
     Ability to view a sequence in the Web browser on the 3D Display

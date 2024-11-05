@@ -21,9 +21,19 @@ database_url = "/usr/local/share/ledplayr/db.sqlite" # Required
 storage = "/usr/local/share/ledplayr/storage" # Required
 multicast = true # Optional, defaults to true
 
+[scheduler]
+auto_start = true # Optional, defaults to true
+
 [web]
 bind = "0.0.0.0" # Optional, defaults to "0.0.0.0"
-port = 80 # Optional, defaults to 3000</pre>
+port = 80 # Optional, defaults to 3000
+
+[log] # Optional, defaults to no file logging
+directory = "/usr/local/share/ledplayr/storage" # Required
+prefix = "ledplay." # Optionsl, defaults to ""
+period = "hour" # Optional, log rotate period - defaults to never
+                # options are "minute", "hour", "day", "never"
+max_files = 3 # Optional, default is unlimited</pre>
 
 <h2 class="text-lg">Systemd</h2>
 <code>/etc/default/ledplayr</code>

@@ -26,18 +26,20 @@
       <li>By date, day of the week, and time period</li>
     </ul>
   </li>
+  <li>Display of logs in the WebUI</li>
+  <li>Dark mode</li>
+  <li>
+    Ability to test models
+    <ul>
+      <li>A combination of static and moving patterns can be used to test models</li>
+    </ul>
+  </li>
 </ul>
 
 <h2>What isn't supported?</h2>
 
 <ul>
-  <li>Testing models</li>
-  <li>
-    Essentially any form of error handling if you mess up your config
-    <ul>
-      <li>This includes uploading a sequence with the wrong number of nodes</li>
-    </ul>
-  </li>
+  <li>Essentially any form of error handling if you mess up your config</li>
   <li>
     Playing of media
     <ul>
