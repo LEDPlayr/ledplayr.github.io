@@ -7,7 +7,7 @@
 </script>
 
 <div
-  class="sticky top-0 z-30 h-16 w-full bg-base-100 bg-opacity-90 text-base-content shadow-sm backdrop-blur">
+  class="bg-base-100/90 text-base-content sticky top-0 z-30 h-16 w-full [transform:translate3d(0,0,0)] justify-center shadow-xs backdrop-blur">
   <div class="navbar">
     <div class="navbar-start">
       <div class="dropdown">
@@ -15,7 +15,7 @@
           <PhList class="text-xl" />
         </div>
         <Navigation
-          class="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow" />
+          class="menu dropdown-content menu-sm rounded-box bg-base-100 z-[1] mt-3 w-52 p-2 shadow" />
       </div>
     </div>
 
@@ -28,7 +28,7 @@
         <li>
           <details>
             <summary>Theme</summary>
-            <ul class="rounded-t-none bg-base-100 p-2">
+            <ul class="bg-base-100 rounded-t-none p-2">
               <li>
                 <input
                   type="radio"

@@ -11,9 +11,9 @@ const config = {
       strict: true,
     }),
   },
-  // compilerOptions: {
-  //   runes: true,
-  // },
+  compilerOptions: {
+    runes: true,
+  },
 };
 
 export default config;

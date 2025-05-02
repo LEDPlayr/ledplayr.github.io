@@ -50,7 +50,12 @@ export const appendSp = (
     }
   };
 
+  let anchor = "";
   for (const [name, val] of Object.entries(sp)) {
+    if (name === "__KIT_ROUTES_ANCHOR__" && val !== undefined) {
+      anchor = `#${val}`;
+      continue;
+    }
     if (Array.isArray(val)) {
       for (const v of val) {
         append(name, v);
@@ -61,8 +66,8 @@ export const appendSp = (
   }
 
   const formatted = params.toString();
-  if (formatted) {
-    return `${prefix}${formatted}`;
+  if (formatted || anchor) {
+    return `${prefix}${formatted}${anchor}`.replace("?#", "#");
   }
   return "";
 };
@@ -84,7 +89,7 @@ export const currentSp = () => {
   return record;
 };
 
-// route function helpers
+/* type helpers for route function */
 type NonFunctionKeys<T> = { [K in keyof T]: T[K] extends Function ? never : K }[keyof T];
 type FunctionKeys<T> = { [K in keyof T]: T[K] extends Function ? K : never }[keyof T];
 type FunctionParams<T> = T extends (...args: infer P) => any ? P : never;
@@ -126,7 +131,7 @@ export function route<T extends keyof AllTypes>(key: T, ...params: any[]): strin
  *
  * Full example:
  * ```ts
- * import type { KIT_ROUTES } from './ROUTES'
+ * import type { KIT_ROUTES } from '$lib/ROUTES'
  * import { kitRoutes } from 'vite-plugin-kit-routes'
  *
  * kitRoutes<KIT_ROUTES>({

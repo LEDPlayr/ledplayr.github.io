@@ -40,20 +40,20 @@
 </svelte:head>
 
 <dialog bind:this={modal} class="modal">
-  <div class="container card modal-box card-compact max-w-none bg-base-100 shadow-xl">
+  <div class="card modal-box card-compact bg-base-100 container shadow-xl">
     <img
       class="modal-img max-h-full flex-grow object-contain"
       src="{base}/screenshots/{images[curr].img}"
       alt={images[curr].title} />
 
     <div
-      class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+      class="absolute top-1/2 right-5 left-5 flex -translate-y-1/2 transform justify-between">
       <button onclick={prev} class="btn btn-circle">❮</button>
       <button onclick={next} class="btn btn-circle">❯</button>
     </div>
 
     <form method="dialog">
-      <button class="btn btn-circle btn-ghost btn-sm absolute right-2 top-2">✕</button>
+      <button class="btn btn-circle btn-ghost btn-sm absolute top-2 right-2">✕</button>
     </form>
 
     <div class="card-body flex-none">
@@ -68,18 +68,20 @@
 
 <div class="container mx-auto p-4">
   <ul class="flex flex-wrap gap-4">
-    {#each images as img, idx}
+    {#each images as img, idx (img.img)}
       <li class="thumb m-auto flex-grow text-center">
         <button
           onclick={() => {
             showModal(idx);
           }}>
-          <figure class="border">
+          <figure class="border-neutral-content border">
             <img
               class="thumb-img m-auto object-cover p-2 align-bottom"
               src="{base}/screenshots/{img.img}"
               alt={img.title} />
-            <figcaption class="border-t p-2 text-center">{img.title}</figcaption>
+            <figcaption class="border-neutral-content border-t p-2 text-center">
+              {img.title}
+            </figcaption>
           </figure>
         </button>
       </li>

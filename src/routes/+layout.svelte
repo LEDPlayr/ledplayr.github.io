@@ -1,7 +1,8 @@
 <script lang="ts">
-  import "../app.scss";
+  import "../app.css";
 
   import { onMount } from "svelte";
+
   import Navbar from "$lib/components/Navbar.svelte";
   import { darkMode } from "$lib/stores.svelte";
 
